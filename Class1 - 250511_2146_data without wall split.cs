@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 
 [Transaction(TransactionMode.Manual)]
-public class RoomWallAreaExport : IExternalCommand
+public class ExtractWallArea : IExternalCommand
 {
     public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
     {
@@ -69,7 +69,7 @@ public class RoomWallAreaExport : IExternalCommand
 
                             // Area
                             double height = wall.get_Parameter(BuiltInParameter.WALL_USER_HEIGHT_PARAM)?.AsDouble() ?? 10.0;
-                            double area = UnitUtils.Convert(curve.Length * height, DisplayUnitType.DUT_SQUARE_FEET, DisplayUnitType.DUT_SQUARE_FEET);
+                            double area = UnitUtils.Convert(curve.Length * height, UnitTypeId.SquareFeet, UnitTypeId.SquareFeet);
 
                             csvLines.Add($"{room.Number},{room.Name},{wall.Id},{curve.Length:F2},{area:F2},{orientation}");
                         }

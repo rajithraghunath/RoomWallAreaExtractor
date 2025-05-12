@@ -2,7 +2,7 @@
 <RevitAddIns>
 <AddIn Type="Command">
  <Name>RoomWallArea</Name>
- <FullClassName>RoomWallAreaExtractor.ExtractWallArea</FullClassName>
+ <FullClassName>ExtractWallArea</FullClassName>
  <Text>RoomWallArea</Text>
  <Description>Extract the area of each walls of the Rooms created</Description>
  <VisibilityMode>AlwaysVisible</VisibilityMode>
