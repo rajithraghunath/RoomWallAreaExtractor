@@ -54,6 +54,14 @@ public class ExtractWallArea : IExternalCommand
 
                     //***************************
                     //***************************
+                    string roomName = room.Name;
+                    string roomNumber = room.Number;
+
+                    if (roomName.EndsWith(" " + roomNumber))
+                    {
+                        roomName = roomName.Substring(0, roomName.Length - roomNumber.Length - 1);
+                        room.Name = roomName; // Update the room name
+                    }
 
                     double roomWallArea = 0.0;
                     // List to store individual wall info (Wall Id, Wall Area)
