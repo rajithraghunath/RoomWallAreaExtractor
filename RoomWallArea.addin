@@ -3,11 +3,11 @@
 <AddIn Type="Command">
  <Name>RoomWallArea</Name>
  <FullClassName>ExtractWallArea</FullClassName>
- <Text>RoomWallArea</Text>
+ <Text>Room-Wall-area</Text>
  <Description>Extract the area of each walls of the Rooms created</Description>
  <VisibilityMode>AlwaysVisible</VisibilityMode>
  <Assembly>C:\Users\rajith.r\OneDrive - Setty and Associates\Rajith\Vs\RoomWallAreaExtractor\bin\Debug\RoomWallAreaExtractor.dll</Assembly>
- <AddInId>09EFE6FA-96DE-4F87-BDEE-C3E51EE144A1</AddInId>
+ <AddInId>ADBA6217-66F8-498E-99FF-609F3C23A890</AddInId>
  <VendorId>rajith</VendorId>
   </AddIn>
   </RevitAddIns>
