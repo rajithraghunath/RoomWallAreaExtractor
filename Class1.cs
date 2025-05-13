@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 
 [Transaction(TransactionMode.Manual)]
-public class ExtractWallArea_1 : IExternalCommand
+public class ExtractWallArea : IExternalCommand
 {
     public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
     {
@@ -124,9 +124,6 @@ public class ExtractWallArea_1 : IExternalCommand
                                 continue;
                             }
 
-
-
-
                             // View Name
                             string viewName = room.get_Parameter(BuiltInParameter.LEVEL_NAME)?.AsString();
 
@@ -139,7 +136,7 @@ public class ExtractWallArea_1 : IExternalCommand
                             double area = UnitUtils.Convert(curve.Length * height, UnitTypeId.SquareFeet, UnitTypeId.SquareFeet);
 
                             // GUID
-                            string guid = wall.get_Parameter (BuiltInParameter.IFC_TYPE_GUID)?.ToString();
+                            string guid = wall.UniqueId;
 
                             csvLines.Add($"{room.Number},{room.Name},{viewName},{wall.Id},{guid},{curve.Length:F2},{area:F2},{roomWallArea},{orientation},");
                         }

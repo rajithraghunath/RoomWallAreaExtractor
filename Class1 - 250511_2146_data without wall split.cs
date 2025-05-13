@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 
 [Transaction(TransactionMode.Manual)]
-public class ExtractWallArea : IExternalCommand
+public class WallSplit : IExternalCommand
 {
     public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
     {
